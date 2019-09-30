@@ -29,7 +29,7 @@ The usage modes of Guarda and parameters definition must be setted as program ar
 - **option**: defines which mode Guarda is running it could be three diferent ones:
   - `-i`: The **init** mode. It reads a path three of a desired directory and stores a initial, ground truthly hashes.
   - `-t`: The **tracking** mode. It tracks the directory recalculating hashes and highlighting tampered, included or deleted files.
-  - `-x`: The **exterminator** mode. It removes the Guarda current structure.
+  - `-x`: The **purge** mode. It removes the Guarda current structure.
 
 - **path**: defines the root directory that is going to be analysed.
   - Usage pattern: `-path /home/user` (relative path is supported)
@@ -56,7 +56,7 @@ Tracking a path tree against guarda stored structure:
 $ java -jar guarda-x.x.x-alias.jar -t -path .
 ```
 
-Removing guarda metadata by using exterminator mode:
+Removing guarda metadata by using purge mode:
 
 ```
 $ java -jar guarda-x.x.x-alias.jar -x -path .
