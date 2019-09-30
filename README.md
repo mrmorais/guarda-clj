@@ -12,7 +12,7 @@ Also you can download .jar executable from the project's Github releases section
 
 Run the executable as .jar
 
-    $ java -jar guarda-0.1.0-standalone.jar [args]
+    $ java -jar guarda-x.x.x-alias.jar [args]
 
 Or run with `lein` (being on the project root path)
 
@@ -38,12 +38,33 @@ The usage modes of Guarda and parameters definition must be setted as program ar
 
 ## Examples
 
-...
+Create and store a path tree hashed structure:
+
+```
+$ java -jar guarda-x.x.x-alias.jar -i -path .
+```
+
+Using HMAC mode for initializing a structure:
+
+```
+$ java -jar guarda-x.x.x-alias.jar -i -path . -hmac password
+```
+
+Tracking a path tree against guarda stored structure:
+
+```
+$ java -jar guarda-x.x.x-alias.jar -t -path .
+```
+
+Removing guarda metadata by using exterminator mode:
+
+```
+$ java -jar guarda-x.x.x-alias.jar -x -path .
+```
 
 ### Bugs
 
-...
-
+- There's a know bug in the function that verify if a path has hidden directories on it (guarda.core/is-hidden?) caused by a badly formatted regex expression. It's not spotting directories with a special character on it. `.guaca-mole` for instance is not matched because of the `-`. 
 
 ## License
 
